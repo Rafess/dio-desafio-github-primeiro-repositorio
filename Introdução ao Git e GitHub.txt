@@ -1,0 +1,27 @@
+GIT
+
+	A sigla SHA1 significa Secure Hash Algorithm, e é um conjunto de funções hash criptográficas projetadas pela NSA (National Scurity Agency – USA).
+	A encriptação gera um conjunto de caracteres de 40 dígitos que é único, e serve de identificação dos arquivos, e de forma extremamente segura. É uma forma curta de representar um arquivo. 
+ 	O HSA1 permite que o git consiga identificar modificações no projeto.
+OBJETOS DO GIT 
+	- BLOBS 
+	- TREES
+	- COMMITS
+O objeto blob é onde os arquivos ficam guardados, é o bloco básico de composição, guardam o sha1 dos arquivos.
+O objeto tree, possui também metadados, e aponta para blobs ou também outras arvores, mas a tree guarda também um sha1 do metadado das arvores, se um arquivo de um blob mudar, o sha1 da tree vai mudar também. 
+ 
+O commit é o mais importante, aponta para trees, parentes (outros commits anteriores), autor, mensagem e timestamp. 
+A mensagem no commit explica o que está acontecendo nessa modificação. 
+Os commits possuem um sha1 também, se alterar um arquivo de uma blob, de dentro de uma tree, dentro de um commit, o sha1 de todos esses mudará.
+
+CHAVES SSH E TOKENS 
+	Chave SSH é uma forma de estabelecer uma conexão segura entre duas máquinas, assim o github conhecerá nossa “assinatura” sendo confiável para o github.
+	Token de acesso pessoal é mais assemelhado ao user e password do que ao ssh, é mais preferível utilizar a chave ssh. 
+
+
+	COMANDOS GIT
+	- não é um comando git mas “ls -a” mostra as pastas ocultas.
+	Git init: inicia o repositório do git. 
+	Git add: adiciona modificações de arquivos e move para staged, local que deixa esperando para alguma coisa, aguardando uma ação.
+	Git commit: move os arquivos do staged e cria um snapshot do estado que o repositório se encontra, alem disso, 
+	Git status: mostra como os arquivos estão, que estado se encontram.
